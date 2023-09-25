@@ -20,10 +20,8 @@ const Cards = ({ cards, searchData }) => {
           {
           cards
             .filter((val ) =>
-            val.category.toLowerCase().includes(searchData.toLowerCase())
-            )
-           
-            .map((val) => (
+            val.category.toLowerCase().includes(searchData.toLowerCase())).map((val) => (
+             
               <FilterCard key={val.id} card={val} />
             ))}
             </div>
