@@ -1,23 +1,29 @@
-import React from 'react';
+
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 
 const COLORS = ['#FF444A', '#00C49F'];
+const clr_red={
+    background:'#FF444A'
+};
+const clr_green={
+    background:'#00C49F'
+};
 
 const RADIAN = Math.PI / 180;
-const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
+const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent}) => {
   const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
   const x = cx + radius * Math.cos(-midAngle * RADIAN);
   const y = cy + radius * Math.sin(-midAngle * RADIAN);
 
   return (
     <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
-      {`${(percent * 100).toFixed(2)}%`} {/* Display percentages with two decimal places */}
+      {`${(percent * 100).toFixed(2)}%`} 
     </text>
   );
 };
 
 const Statistics = () => {
-  const localStorageLength = localStorage.length;
+//   const localStorageLength = localStorage.length;
   const donationItems = JSON.parse(localStorage.getItem('donation'));
   const donationItemsLength = donationItems ? donationItems.length : 0;
 
@@ -29,7 +35,8 @@ const groupAPercentage=(100-groupBPercentage);
   ];
 
   return (
-    <div className='mt-24'>
+    <div>
+        <div className='mt-24'>
       <ResponsiveContainer width="100%" height={400}>
         <PieChart>
           <Pie
@@ -49,6 +56,17 @@ const groupAPercentage=(100-groupBPercentage);
         </PieChart>
       </ResponsiveContainer>
     </div>
+    <div className='flex justify-center items-center gap-6 '>
+  
+        <p>Your Donation</p>
+        <div className='w-1/12 h-3 ' style={clr_green}></div>
+   
+    
+        <p>Total Donation</p>
+        <div className='w-1/12 h-3 bg-red-500' style={clr_red}></div>
+    </div>
+    </div>
+   
   );
 };
 

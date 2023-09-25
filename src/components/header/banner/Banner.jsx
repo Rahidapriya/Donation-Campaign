@@ -15,7 +15,7 @@ const Banner = () => {
   const overlayStyle = {
     position: 'absolute',
     inset: 0,
-    backgroundColor: 'rgba(255, 255, 255, 0.5)', 
+    backgroundColor: 'rgba(255, 255, 255, 0.95)', 
     mixBlendMode: 'lighten', 
   };
 
