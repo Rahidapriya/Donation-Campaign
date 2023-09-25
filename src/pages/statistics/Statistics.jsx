@@ -56,7 +56,7 @@ const groupAPercentage=(100-groupBPercentage);
         </PieChart>
       </ResponsiveContainer>
     </div>
-    <div className='flex justify-center items-center gap-6 '>
+    <div className='flex justify-center items-center gap-6  '>
   
         <p>Your Donation</p>
         <div className='w-1/12 h-3 ' style={clr_green}></div>

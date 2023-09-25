@@ -19,7 +19,7 @@ const DonationCard = ({card}) => {
         background:`${text_color}`
     }
     return (
-        <div className="flex-grow flex " >
+        <div className="flex-grow lg:flex " >
             <div style={cardBgStyle} className="flex-grow relative flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
   <div className="relative m-0 w-2/5 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700">
     <img
