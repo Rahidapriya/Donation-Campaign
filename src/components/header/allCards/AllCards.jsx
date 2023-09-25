@@ -15,9 +15,11 @@ const AllCards = ({ card }) => {
     const cardBgStyle = {
         background: `${bg_color}`,
     };
+    
 
     return (
         <div className="">
+            <Link to={`/donate/${id}`}>
             <div className="card  h-80  shadow-xl" style={cardBgStyle}>
                 <figure><img src={cover_image} className="w-full" alt={title} /></figure>
                 <div className="card-body">
@@ -31,6 +33,7 @@ const AllCards = ({ card }) => {
                     {/* <p>{price}</p> */}
                 </div>
             </div>
+            </Link>
         </div>
     );
 };
