@@ -30,7 +30,8 @@ const myCreatedRoute=createBrowserRouter([
             path:"/donate/:id",
            element:<Card></Card>,
             loader:()=>fetch('/donate.json')
-        }
+        },
+       
         ]
     }
 ])

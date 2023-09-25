@@ -3,7 +3,7 @@ import './banner.css'
 
 const Banner = () => {
   const backgroundImageStyle = {
-    backgroundImage: `url('https://i.ibb.co/kmphJ5R/banner.jpg')`,
+    backgroundImage: `url('https://i.ibb.co/k6FWn7S/Rectangle-4281.png')`,
     backgroundSize: 'cover',
     
     backgroundRepeat: 'no-repeat',

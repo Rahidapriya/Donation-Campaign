@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Statistics from "../statistics/Statistics";
 
 
 const DonationCard = ({card}) => {
@@ -50,6 +51,7 @@ const DonationCard = ({card}) => {
     </a>
   </div>
 </div>
+
         </div>
     );
 };
