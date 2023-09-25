@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const DonationCard = ({card}) => {
@@ -37,12 +38,14 @@ const DonationCard = ({card}) => {
       {price}
     </p>
     <a className="inline-block" href="#">
+    <Link to={`/donate/${id}`}>
     <button style={detailsbtn}
   className=' flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none'
   type="button"
 >
   View Details
 </button>
+</Link>
 
     </a>
   </div>
