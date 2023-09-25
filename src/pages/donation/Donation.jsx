@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import DonationCard from "./DonationCard";
-import Statistics from "../statistics/Statistics";
+
 
 
 const Donation = () => {
@@ -22,7 +22,7 @@ const Donation = () => {
         <div >
           {
             noDataFound? <p className="h-[80vh] flex justify-center items-center">{noDataFound}</p>:
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-20 ">
                 {
                      isShow? donation.map(card=>(<DonationCard key={card.id} card={card}></DonationCard>)):
                      donation.slice(0,4).map(card=>(

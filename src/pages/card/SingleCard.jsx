@@ -28,7 +28,7 @@ const SingleCard = ({card}) => {
         }
     }
     return (
-        <div className=''>
+        <div className='mb-20'>
              <img src={cover_image} alt="cards" className='w-full' />
            <div className="card  image-full">
   
