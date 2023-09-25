@@ -1,9 +1,7 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const AllCards = ({ card }) => {
+const FilterCard = ({card}) => {
     const { id, cover_image, title, category, description, price, bg_color, text_color, bg_btn } = card || {};
 
     // Define the textStyle object with dynamic text color
@@ -39,4 +37,4 @@ const AllCards = ({ card }) => {
     );
 };
 
-export default AllCards;
+export default FilterCard;

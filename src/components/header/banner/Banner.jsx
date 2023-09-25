@@ -1,7 +1,9 @@
 
+import { useState } from 'react';
 import './banner.css'
 
-const Banner = () => {
+const Banner = ({onSearch}) => {
+  
   const backgroundImageStyle = {
     backgroundImage: `url('https://i.ibb.co/k6FWn7S/Rectangle-4281.png')`,
     backgroundSize: 'cover',
@@ -11,6 +13,17 @@ const Banner = () => {
     
      
   };
+  const [searchTerm,setSearchTerm]=useState("");
+  // const handleInputChange = (event) => {
+  //   setSearchTerm(event.target.value);
+  // }
+  const handleInputChange = (event) => {
+    const newValue = event.target.value;
+    setSearchTerm(newValue);
+
+    // Call the callback function to send search data to the parent
+    onSearch(newValue);
+  };
 
   const overlayStyle = {
     position: 'absolute',
@@ -18,7 +31,7 @@ const Banner = () => {
     backgroundColor: 'rgba(255, 255, 255, 0.95)', 
     mixBlendMode: 'lighten', 
   };
-
+  console.log("search:",searchTerm);
   return (
     <div className="relative h-full " style={backgroundImageStyle}>
       <div style={overlayStyle}></div>
@@ -27,10 +40,12 @@ const Banner = () => {
       <div><h1 className=' text-xl md:text-3xl lg:text-4xl text-center'>I Grow By Helping People In Need</h1></div>
   <div className="relative mb-4 flex w-full  lg:w-4/12 md:w-1/2 flex-wrap justify-center items-stretch">
     <input
-      type="search"
+    id='searchInput' onChange={handleInputChange}
+      type="text"
       className="relative m-0 -mr-0.5 block w-[1px] min-w-0 flex-auto justify-center rounded-l border border-solid border-neutral-300 bg-white bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
       placeholder="Search here"
       aria-label="Search"
+      value={searchTerm}
       aria-describedby="button-addon1" />
 
    
@@ -53,6 +68,7 @@ const Banner = () => {
     </button>
   </div>
 </div>
+
     </div>
   );
 };
