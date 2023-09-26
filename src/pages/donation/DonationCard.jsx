@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Statistics from "../statistics/Statistics";
+
 
 
 const DonationCard = ({card}) => {

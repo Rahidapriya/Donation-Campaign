@@ -8,7 +8,7 @@ const Card = () => {
     const[card,setCard]=useState({});
     const {id}=useParams();
     const cards=useLoaderData();
-    console.log("eff",cards)
+   
     useEffect(()=>{
         const findCard=cards?.find(card=>card.id==id);
         setCard(findCard)

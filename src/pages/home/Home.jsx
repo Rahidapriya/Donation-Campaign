@@ -6,9 +6,9 @@ import { useState } from "react";
 
 
 const Home = () => {
-    const [searchData, setSearchData] = useState(''); // State to store search data
+    const [searchData, setSearchData] = useState(''); 
 
-  // Callback function to receive search data from Banner
+ 
   const handleSearchData = (data) => {
     setSearchData(data);
   };
