@@ -32,7 +32,7 @@ const SingleCard = ({card}) => {
              <img src={cover_image} alt="cards" className='w-full' />
            <div className="card  image-full">
   
-  <div className="card-body pt-4 md:pt-12 bg relative -mt-20 lg:-mt-36">
+  <div className="card-body pt-4 lg:pt-12 bg relative -mt-20 lg:-mt-36">
     
     <div className="card-actions justify-start ">
       <button onClick={HandleAddToDonation} className="btn md:btn-md btn-sm  -mb-20 text-white border-none" style={cardBgStyle}>Donate {price}</button>
