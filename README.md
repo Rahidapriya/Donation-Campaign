@@ -1,4 +1,6 @@
-## Projects Features
+# Donation Campaign
+
+## Project Features
 
 - **Category-Based Search:** Visitors can easily search for donation items by category, such as Health, Education, Food, Clothing.
 
@@ -8,5 +10,16 @@
 
 - **Donation History:** Users can conveniently check their donation history by clicking the "Donate" option in the navigation bar.
 
-- **Donation Statistics:** A visually appealing pi chart displays donation statistics, providing insights into the distribution of contributions across categories.
+- **Donation Statistics:** A visually appealing pie chart displays donation statistics, providing insights into the distribution of contributions across categories.
 
+## Tech Stack
+
+### Frontend
+- Developed with React and Vite for a fast and reactive user interface.
+- A blend of Tailwind CSS and Vanilla CSS for styling.
+
+### Authentication
+- Firebase for secure user authentication.
+
+## Live Link
+[Donation Campaign Live Site](https://ph-donation-rahidapriya-a8.surge.sh/)
